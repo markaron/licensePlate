@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}"/>
+</head>
+<body>
+
+<form action="#" th:action="@{/search}" method="get">
+    <label for="plateId">Search</label>
+    <input type="text" id="plateId" name="q"/>
+    <input type="submit" value="Search"/>
+</form>
+
+<table>
+    <tr>
+        <th>Licence Plate</th>
+        <th>Brand</th>
+        <th>Model</th>
+        <th>Color</th>
+        <th>Year</th>
+    </tr>
+    <tr th:each="plate : ${plates}">
+        <td th:text="${plate.getPlate()}"></td>
+        <td th:text="${plate.getCarBrand()}"></td>
+        <td th:text="${plate.getCarModel()}"></td>
+        <td th:text="${plate.getColor()}"></td>
+        <td th:text="${plate.getYear()}"></td>
+    </tr>
+</table>
+</body>
+</html>
+
+
+

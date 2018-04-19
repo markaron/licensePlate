@@ -6,7 +6,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table
-public class LicensePlates {
+public class LicencePlates {
 
   @Id
   private String plate;
@@ -15,10 +15,10 @@ public class LicensePlates {
   private String color;
   private String year;
 
-  public LicensePlates() {
+  public LicencePlates() {
   }
 
-  public LicensePlates(String plate, String carBrand, String carModel, String color, String year) {
+  public LicencePlates(String plate, String carBrand, String carModel, String color, String year) {
     this.plate = plate;
     this.carBrand = carBrand;
     this.carModel = carModel;
